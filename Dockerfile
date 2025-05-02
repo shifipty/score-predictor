@@ -1,9 +1,9 @@
-FROM python:3.9
+FROM python:3.8
 WORKDIR /opt/student_scores
 COPY requirements.txt .
-RUN pip3.9 install -r requirements.txt
+RUN pip3.8 install -r requirements.txt
 COPY model.py .
 COPY student_scores.csv .
-RUN python3.9 model.py
+RUN python3.8 model.py
 COPY app.py .
-ENTRYPOINT python3.9 app.py
+ENTRYPOINT python3.8 app.py
